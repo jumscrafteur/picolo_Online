@@ -7,16 +7,108 @@ body {
   justify-content: space-between;
   flex-wrap: wrap; }
 
-.card {
+.join, .create {
+  position: relative;
   background-color: #03A9F4;
   margin: auto;
-  padding: 2rem;
   border-radius: 1.5rem;
-  width: 17.5rem;
-  height: 15rem; }
-  .card h1 {
+  width: 25rem;
+  height: 22rem; }
+  .join h1, .create h1 {
     color: #fff;
     text-align: center;
-    font-weight: 400; }
+    font-weight: 400;
+    font-size: 3rem; }
+  .join form, .create form {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(3rem, auto);
+    position: absolute;
+    bottom: 1rem;
+    width: calc( 25rem - 20px - 1rem); }
+    .join form input, .join form button, .create form input, .create form button {
+      border: none;
+      border-radius: .5rem;
+      text-align: center;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 2rem;
+      background-color: #fff;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25); }
+      .join form input img, .join form button img, .create form input img, .create form button img {
+        fill: green;
+        filter: url(/images/filter.svg#filter0_i); }
+      .join form input:hover, .join form button:hover, .create form input:hover, .create form button:hover {
+        box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.25); }
+        .join form input:hover img, .join form button:hover img, .create form input:hover img, .create form button:hover img {
+          filter: drop-shadow(-4px -4px 10px rgba(0, 0, 0, 0.25)); }
+    .join form .pseudoInput, .create form .pseudoInput {
+      grid-column: 1 / 4;
+      grid-row: 1; }
+    .join form .roomInput, .create form .roomInput {
+      grid-column: 1 / 3;
+      grid-row: 2;
+      text-transform: uppercase; }
+    .join form .joinSubmit, .create form .joinSubmit {
+      grid-column: 3 / 4;
+      grid-row: 2;
+      padding: 7px 0 0 0; }
+    .join form .createSubmit, .create form .createSubmit {
+      grid-column: 1 / 4;
+      grid-row: 2;
+      padding: 7px 0 0 0; }
+
+.wait {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  background-color: #03A9F4;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  width: 60%;
+  height: 22rem;
+  text-align: center; }
+  .wait .roomInfo {
+    width: 55%;
+    min-width: 400px; }
+    .wait .roomInfo h1 {
+      color: #fff;
+      text-align: center;
+      font-weight: 400;
+      font-size: 3rem; }
+    .wait .roomInfo .roomName {
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 400;
+      font-size: 2.5rem;
+      background-color: #fff;
+      padding: 0 2rem;
+      margin: auto;
+      width: 15rem;
+      border-radius: .5rem;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25); }
+  .wait .playersInfo {
+    background-color: #fff;
+    border-radius: 1.5rem;
+    width: 40%; }
+    .wait .playersInfo ul {
+      margin: 1rem 0;
+      text-align: left;
+      list-style: url("/images/listDot.svg");
+      font-size: 1.5rem;
+      font-family: 'Roboto Mono', monospace; }
+      .wait .playersInfo ul li {
+        padding: 0 0 .5rem 0; }
+        .wait .playersInfo ul li img {
+          vertical-align: bottom;
+          margin: 0 1rem 0 0; }
+    .wait .playersInfo h1 {
+      background-color: red;
+      margin: 0;
+      border-radius: 1.5rem 1.5rem 0 0;
+      background: #c5ecfe;
+      padding: .5rem 0 .3rem 0; }
 
 /*# sourceMappingURL=style.css.map */
